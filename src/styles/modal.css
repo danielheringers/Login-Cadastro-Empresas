@@ -1,0 +1,211 @@
+.modals {
+  width: 600px;
+  height: calc(50vh - 5rem);
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.modalLogin {
+  max-width: 100%;
+  visibility: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-bottom: 2px solid var(--color-font1);
+  opacity: 0%;
+  transition: 0.5s;
+}
+
+.modalLogin.active {
+  visibility: visible;
+  opacity: 100%;
+}
+
+.modalLogin h2 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.modalCadastro {
+  max-width: 100%;
+  visibility: hidden;
+  border-top: 2px solid var(--color-font1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  opacity: 0%;
+  transition: 0.5s;
+}
+
+.modalCadastro.active {
+  visibility: visible;
+  opacity: 100%;
+}
+
+.modalCadastro h2 {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.empresasListadas {
+  visibility: hidden;
+  position: absolute;
+  left: 3rem;
+  width: 600px;
+  height: 80vh;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.empresasListadas.active {
+  visibility: visible;
+}
+
+.Setores {
+  width: 150px;
+  height: 25px;
+  padding: 2px;
+  margin: 1rem 0rem;
+  text-transform: uppercase;
+  background-color: var(--color-background-first);
+  color: var(--color-font);
+}
+
+.nomeEmpresa.deactive {
+  display: hidden;
+}
+
+.setores {
+  visibility: hidden;
+}
+
+.setores.active {
+  visibility: visible;
+}
+
+.setores ul li {
+  margin: 10px 0px;
+}
+
+main .empresas {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 100px);
+  position: absolute;
+  justify-content: space-between;
+}
+
+main .companys {
+  display: flex;
+  width: 80vw;
+  height: 200px;
+  overflow-x: auto;
+  margin: 1rem;
+}
+
+main .Divcompanys .companys div {
+  background-color: var(--color-background-first);
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5px;
+  text-align: center;
+}
+
+main .listAllCompany {
+  display: flex;
+  width: 80vw;
+  height: 200px;
+  overflow-x: auto;
+  margin: 1rem;
+}
+
+main .listAllCompany div {
+  background-color: var(--color-background-first);
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5px;
+  text-align: center;
+}
+
+.siteDetails {
+  width: 90vw;
+  height: calc(50vh - 2rem);
+  justify-content: center;
+}
+
+.empresas {
+  position: absolute;
+  visibility: hidden;
+}
+
+.empresas.active {
+  visibility: visible;
+}
+
+main .empresas .criarEmpresa {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main .empresas .criarEmpresa form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main .usuarioSemEmprego {
+  display: flex;
+  overflow-x: scroll;
+  max-width: 600px;
+}
+
+main .usuarioSemEmprego div {
+  background-color: var(--color-background-first);
+  display: flex;
+  min-width: 200px;
+  min-height: 100px;
+  margin: 0rem 1rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+main .listDpt div {
+  margin: 1rem 0rem;
+}
+
+main .listDpt div .funcionarios {
+  display: flex;
+  overflow-x: scroll;
+  max-width: 600px;
+}
+
+main .listDpt div .funcionarios div {
+  min-width: 200px;
+  height: 100px;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: var(--color-background-first);
+  margin: 0rem 1rem;
+}
+
+@media (max-width: 768px) {
+  .modals {
+    width: 90vw;
+  }
+
+  .empresasListadas {
+    width: 50vw;
+  }
+}

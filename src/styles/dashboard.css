@@ -1,0 +1,183 @@
+body, header, div, nav, button, main, h2, h1, h3, p, ul, li, span, a{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; 
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+}
+
+body{
+    background-color: var(--color-background-second);
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+}
+header{
+    display: flex;
+    align-items: center;
+}
+
+header .logoTitle{
+    width: 100px;
+    font-size: 1.2rem;
+    color: var(--color-font2);
+}
+
+header nav{
+    display: flex;
+    background-color: var(--color-background-first);
+    align-items: center;
+    justify-content: space-around;
+    width: 100vw;
+    height: 8vh;
+
+}
+
+.navlist{
+    display: flex;
+}
+
+.navlist li{
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    color: var(--color-font);
+    justify-content: space-between;
+}
+.siteDetails{
+    width: 90vw;
+    height: calc(50vh - 2rem);
+    justify-content: center;
+}
+
+main .menuLateral{
+    width: 20vw;
+}
+
+main .menuLateral p{
+    color: var(--color-font2);
+}
+
+main .menuLateral ul{
+    height: 70vh;
+    overflow-y: auto;
+}
+
+main .dadosEditaveis{
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .dadosEditaveis form{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 2rem;
+}
+
+main .dadosEditaveis p{
+    align-self: flex-start;
+}
+
+main .dadosEditaveis .divInput{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .dadosEditaveis .divInput input{
+    width: 600px;
+    height: 1.7rem;
+    padding: 0.3rem;
+    border-style: solid;
+    border-radius: 3px;
+    font-size: 1.2rem;
+}
+
+
+@media (max-width: 768px){
+    body{
+        width: 100vw;
+        overflow-x: hidden;
+    }
+    .navlist {
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 50vw;
+        height: 0vh;
+        background-color: var(--color-background-first);
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        opacity: 0;
+        transition: 0.5s;
+        overflow: auto;
+    }
+
+    .navlist li{
+        margin-left: 0;
+        opacity: 100;
+    }
+
+    .navlist.active{
+        height: 30vh;
+        opacity: 100;
+    }
+
+    main .menuLateral{
+        width: 25vw;
+    }
+    main .dadosEditaveis{
+        width: 70%;
+        align-items: flex-start;
+    }
+
+    main .dadosEditaveis form{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0;
+    }
+
+    main .dadosEditaveis .divInput{
+        width: 100%;
+    }
+
+    main .dadosEditaveis .divInput input{
+        width: 100%;
+    }
+
+    
+}
+
+@media (max-width: 401px){
+    main{
+        flex-direction: column;
+        align-items: center;
+    }
+    main .menuLateral{
+        width: 50vw;
+    }
+    main .menuLateral ul{
+        height: 35vh;
+        overflow-y: auto;
+    }
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/admin_dashboard.css">
+    <link rel="stylesheet" href="../styles/components.css">
+    <link rel="stylesheet" href="../styles/modal.css">
+    <link rel="stylesheet" href="../styles/animations.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <script defer type="module" src="../scripts/admin_dashboard.js"></script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <title>Kenzie Empresas</title>
+</head>
+<body>
+    <header>
+        <nav>
+        <h1 class="logoTitle">Kenzie Empresas</h1>
+        <div class="mobileMenu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <ul class="navlist">
+            <li><a id="btnSetores" class="btnEmpresas">Setores</a></li>
+            <li><a id="btnEmpresas" class="btnEmpresas">Empresas</a></li>
+            <li><a id="btnDepartamentos" class="btnEmpresas">Departamentos</a></li>
+        </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="setores">
+            <ul class="setorLista">
+                <h2>Lista de Setores:</h2>
+                <li class="nomeSetor"></li>
+            </ul>
+        </div>
+        <div class="empresas">
+                <div class="criarEmpresa">
+                    <h2>Cadastrar Empresa</h2>
+                    <form>
+                        <span>Empresa</span>
+                        <input type="text" name="nomeEmpresa" id="nomeEmpresa">
+                        <span>Horário Abertura</span>
+                        <input type="text" name="horario" id="horario">
+                        <span>Descrição</span>
+                        <input type="text" name="descricao" id="descricao">
+                        <span>Setor</span>
+                        <select name="selecionarSetor" id="selecionarSetor">
+                        </select>
+                        <button type="button" id="btnCriarEmpresa">Criar</button>
+                    </form>
+                </div>
+                <div class="listCompanySector">
+                    <h2>Listar Empresas por Setor</h2>
+                    <div class="Divcompanys">
+                        <select name="Sectors" id="selectSectors">
+                        
+                        </select>
+                        <div class="companys">
+
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h2>Listar Todas Empresas</h2>
+                    <div class="listAllCompany">
+                        
+                    </div>
+                </div>
+        </div>
+        <div class="departamentos">
+            <div class="createDpt">
+                <h2>Criar Departamentos</h2>
+                <p>Nome do Departamento</p>
+                <input type="text" name="nomeDpt" id="nomeDpt">
+                <p>Descrição do Departamento</p>
+                <input type="text" name="descDpt" id="descDpt">
+                <p>Empresa</p>
+                <select name="selectEmpresa" id="selectEmpresa"></select>
+                <button type="button" class="criarDpt" id="criarDpt">Criar</button>
+            </div>
+            <div class="listDpt">
+                <h2>Detalhes Departamentos</h2>
+                <label for="selectEmpresa">Empresa</label>
+                <select name="selectEmpresa" id="selectEmpresaLista"></select>
+                <label for="selectDptEmpresa">Departamento</label>
+                <select name="selectDptEmpresa" id="selectDptEmpresa">
+                </select>
+                <div>
+                    <label for="funcionarios">Funcionários</label>
+                    <div class="funcionarios" id="funcionarios">
+                        
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2>Usuarios Sem Emprego (Selecione a Empresa e o Setor em Detalhes Departamentos)</h2>
+                <div class="usuarioSemEmprego" id="usuarioSemEmprego">
+
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

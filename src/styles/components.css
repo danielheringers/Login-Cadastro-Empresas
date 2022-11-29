@@ -1,0 +1,225 @@
+.btnLogin{
+    background-color: var(--color-btnLogin);
+    padding: 0.3rem;
+    font-weight: 500;
+    border-radius: 3px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.btnLogin:active{
+    background-color: var(--color-btnFocus);
+    color: var(--color-font2);
+}
+
+.btnSingUp{
+    background-color: var(--color-btnLogin);
+    padding: 0.3rem;
+    font-weight: 500;
+    border-radius: 3px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.btnSingUp:active{
+    background-color: var(--color-btnFocus);
+    color: var(--color-font2);
+}
+
+.btnEmpresas{
+    background-color: var(--color-btnLogin);
+    padding: 0.3rem;
+    font-weight: 500;
+    border-radius: 3px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.btnEmpresas:active{
+    background-color: var(--color-btnFocus);
+    color: var(--color-font2);
+}
+
+.mobileMenu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobileMenu div{
+    width: 32px;
+    height: 2px;
+    background-color: var(--color-btnLogin);
+    margin: 8px;
+}
+
+.modalLogin input{
+    height: 2rem;
+    padding: 0.3rem;
+    border-style: solid;
+    border-radius: 3px;
+    font-size: 1.2rem;
+}
+
+.modalLogin button{
+    background-color: var(--color-btn1);
+    padding: 0.3rem;
+    font-weight: 500;
+    border-radius: 3px;
+}
+
+.modalLogin button:active{
+    background-color: var(--color-btnFocus);
+    color: var(--color-font2);
+}
+
+.modalLogin a{
+    text-align: center;
+}
+
+.modalCadastro input{
+    height: 1.7rem;
+    padding: 0.3rem;
+    border-style: solid;
+    border-radius: 3px;
+    font-size: 1.2rem;
+}
+
+.modalCadastro button{
+    background-color: var(--color-btn1);
+    padding: 0.3rem;
+    font-weight: 500;
+    border-radius: 3px;
+}
+
+.modalCadastro button:active{
+    background-color: var(--color-btnFocus);
+    color: var(--color-font2);
+}
+
+.modalCadastro a{
+    text-align: center;
+}
+
+.modalCadastro select{
+    height: 1.7rem;
+    border-style: solid;
+    border-radius: 3px;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+
+.boasVindas{
+    position: absolute;
+    text-align: center;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    animation-name: animation;
+    animation-duration: 5s;
+    
+}
+
+.boasVindas.deactive{
+    display: none;
+}
+
+.btnFiltrar{
+    width: 50px;
+    background-color: var(--color-btnLogin);
+    padding: 0.3rem;
+    font-weight: 500;
+    border-radius: 3px;
+    transition: 0.3s;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+
+.btnSalvar{
+    width: 350px;
+    background-color: var(--color-btnLogin);
+    padding: 0.3rem;
+    font-weight: 500;
+    border-radius: 3px;
+    transition: 0.3s;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.btnSalvar:active{
+    background-color: var(--color-btnFocus);
+    color: var(--color-font2);
+}
+
+main .empresas .criarEmpresa form button{
+    width: 100px;
+    background-color: var(--color-btnLogin);
+    padding: 0.3rem;
+    font-weight: 500;
+    border-radius: 3px;
+    transition: 0.3s;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+main .empresas .criarEmpresa form button:active{
+    background-color: var(--color-btnFocus);
+    color: var(--color-font2);
+}
+
+main .empresas .criarEmpresa form input{
+    max-width: 600px;
+    margin-bottom: 1rem;
+    border: none;
+    padding: 0.3rem;
+}
+
+main .empresas .criarEmpresa form select{
+    max-width: 609px;
+    padding: 0.3rem;
+}
+@media (max-width: 768px){
+    .mobileMenu{
+        display: block;
+        z-index: 1000;
+    }
+
+    .mobileMenu .line1{
+        transition: 0.2s;
+        opacity: 100;
+    }
+
+    .mobileMenu .line2{
+        position: relative;
+        transition: 2s;
+    }
+
+    .mobileMenu .line3{
+        position: relative;
+        transition: 2s;
+    }
+
+    .mobileMenu.active .line1{
+        opacity: 0;
+    }
+
+    .mobileMenu.active .line2{
+        transform: rotate(495deg);
+    }
+
+    .mobileMenu.active .line3{
+        transform: rotate(-495deg);
+        top: -10px;
+    }
+
+    .btnSalvar{
+        width: 93%;
+
+    }
+    .btnSalvar:active{
+        width: 93%;
+    }
+}

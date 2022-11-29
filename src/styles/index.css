@@ -1,0 +1,98 @@
+body, header, div, nav, button, main, h2, h1, h3, p, ul, li, span, a{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; 
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+}
+
+body{
+    background-color: var(--color-background-second);
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+}
+header{
+    display: flex;
+    align-items: center;
+}
+
+header .logoTitle{
+    width: 100px;
+    font-size: 1.2rem;
+    color: var(--color-font2);
+}
+
+header nav{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--color-background-first);
+    align-items: center;
+    justify-content: space-around;
+    width: 100vw;
+    height: 8vh;
+
+}
+
+.navlist{
+    display: flex;
+}
+
+.navlist:active{
+    display: visible;
+}
+
+.navlist li{
+    letter-spacing: 3px;
+    margin-right: 15px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    color: var(--color-font);
+}
+.siteDetails{
+    width: 90vw;
+    height: calc(50vh - 2rem);
+    justify-content: center;
+}
+
+@media (max-width: 768px){
+    body{
+        width: 100vw;
+        overflow-x: hidden;
+    }
+    .navlist {
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 50vw;
+        height: 0vh;
+        background-color: var(--color-background-first);
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        opacity: 0;
+        transition: 0.5s;
+        overflow: auto;
+    }
+
+    .navlist li{
+        margin-left: 0;
+        opacity: 100;
+    }
+
+    .navlist.active{
+        height: 30vh;
+        opacity: 100;
+    }
+
+
+}

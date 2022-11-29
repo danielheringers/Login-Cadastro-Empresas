@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/dashboard.css">
+    <link rel="stylesheet" href="../styles/components.css">
+    <link rel="stylesheet" href="../styles/modal.css">
+    <link rel="stylesheet" href="../styles/animations.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <script defer type="module" src="../scripts/dashboard.js"></script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <title>Kenzie Empresas</title>
+</head>
+<body>
+    <header>
+        <nav>
+        <h1 class="logoTitle">Kenzie Empresas</h1>
+        </nav>
+    </header>
+    <main>
+        <div class="menuLateral">
+            <p class="labelEmpresa">Empresa:</p>
+            <span class="empresaTrabalha"></span>
+            <p class="labelDepartamento">Departamento:</p>
+            <span class="DepartamentoTrabalha"></span>
+            <p class="labelFuncionariosLista">Funcionários do setor:</p>
+            <ul class="listaFuncionarios">
+
+            </ul>
+        </div>
+        <div class="dadosEditaveis">
+            <h2>Edite seus dados:</h2>
+            <form>
+                <div class="divInput">
+                    <p>Username</p>
+                    <input type="text" name="username" id="username" autocomplete="username">
+                </div>
+                <div class="divInput">
+                    <p>E-mail</p>
+                    <input type="email" name="email" id="email" autocomplete="email">
+                </div>
+                <div class="divInput">
+                    <p>Senha</p>
+                    <input type="password" name="password" id="password" autocomplete="new-password">
+                </div>
+                <div class="divInput">                
+                    <button type="button" class="btnSalvar" id="btnSalvar">Salvar</button>
+                </div>
+
+            </form>
+        </div>
+    </main>
+</body>
+</html>
